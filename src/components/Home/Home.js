@@ -1,10 +1,16 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import useReviews from '../../hooks/useReviews';
 import HomeReview from '../HomeReview/HomeReview';
 import './Home.css';
 
 const Home = (props) => {
     const [reviews] = useReviews();
+    const navigate = useNavigate();
+    const showAllReviews = () => {
+        const path = `/reviews`;
+        navigate(path);
+    }
     return (
         <div>
             <div className='header flex'>
@@ -26,7 +32,7 @@ const Home = (props) => {
 
 
             </div>
-            <button className='bg-indigo-500 font-bold text-white p-6 m-10 rounded-xl'>See All Reviews</button>
+            <button onClick={showAllReviews} className='bg-indigo-500 font-bold text-white p-6 m-10 rounded-xl'>See All Reviews</button>
         </div>
     );
 };
