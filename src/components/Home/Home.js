@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import useReviews from '../../hooks/useReviews';
-import HomeReview from '../HomeReview/HomeReview';
+import ReviewItems from '../ReviewItems/ReviewItems';
 import './Home.css';
 
 const Home = (props) => {
@@ -22,14 +22,13 @@ const Home = (props) => {
 
             </div>
             <h2 className='text-4xl m-10'>Customer Reviews(3)</h2>
-            <div>
+            <div className='reviews'>
                 {
-                    reviews.slice(0, 3).map(product => <HomeReview
+                    reviews.slice(0, 3).map(product => <ReviewItems
                         key={product.id}
                         product={product}
-                    ></HomeReview>)
+                    ></ReviewItems>)
                 }
-
 
             </div>
             <button onClick={showAllReviews} className='bg-indigo-500 font-bold text-white p-6 m-10 rounded-xl'>See All Reviews</button>
