@@ -4,11 +4,13 @@ import './ReviewItems.css';
 const ReviewItems = (props) => {
     const { name, review, rating, img } = props.product;
     return (
-        <div className='review-item text-center'>
-            <img className='img' src={img} alt="" />
-            <h2>Name:{name}</h2>
-            <p>Review:{review}</p>
-            <p>Rating: {rating} (out of 5)</p>
+        <div className='review-item'>
+            <img className='img mr-10' src={img} alt="" />
+            <div className='review-item-details'>
+                <h2>Name: {name}</h2>
+                <p>Review: {review}</p>
+                <p>Rating: <span className='rating'>{rating}</span> (out of 5)</p>
+            </div>
         </div>
     );
 };
