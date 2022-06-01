@@ -16,7 +16,7 @@ const Home = (props) => {
             <div className='header flex'>
                 <div className='mr-10'>
                     <h1 className='text-4xl text-left font-bold text-blue-500 mb-5'>Welcome to my new Web Site</h1>
-                    <p className='text-xl'>Here is lots of reviews and have new chart. When you learn need to know lots of thing.</p>
+                    <p className='text-xl'>Here is lots of reviews and have new chart. When you learn need to know lots of thing and Enjoy!</p>
                 </div>
                 <img className='header-img' src="https://hips.hearstapps.com/ghk.h-cdn.co/assets/16/08/gettyimages-464163411.jpg?crop=1.0xw:1xh;center,top&resize=980:*" alt="" />
 
